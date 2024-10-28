@@ -1,0 +1,116 @@
+/* General Container */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #FF6B6B 0%, #FF9A8B 50%, #7B4397 100%); /* Updated gradient */
+  animation: fadeIn 1s ease-in-out; /* Container fade-in */
+}
+
+/* Keyframe for page fade-in */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Left Section (Logo and Tagline) */
+.left-section {
+  text-align: center;
+  color: #fff;
+}
+
+.logo {
+  width: 150px;
+  margin-bottom: 20px;
+}
+
+.store-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.tagline {
+  font-size: 1.2rem;
+  margin-top: 10px;
+}
+
+/* Right Section (Login Card) */
+.right-section {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Keyframe for card slide-up entrance */
+@keyframes slideUp {
+  0% {
+    transform: translateY(50px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+/* Login card styling */
+.login-card {
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2);
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.85); /* Semi-transparent white background for better readability */
+  animation: slideUp 0.8s ease-out; /* Card slide-up animation */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover transition */
+}
+
+/* Hover effect for login card */
+.login-card:hover {
+  transform: scale(1.05); /* Slightly enlarges the card */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.3); /* Increases shadow */
+}
+
+/* Login Title */
+.login-title {
+  font-size: 1.8rem;
+  text-align: center;
+  margin-bottom: 20px;
+  color: #2F2E41; /* Title color */
+}
+
+/* Button hover effect */
+.login-btn {
+  background-color: #FF6B6B; /* Button color */
+  border: none;
+  transition: background-color 0.3s ease, transform 0.3s ease; /* Hover transition */
+}
+
+.login-btn:hover {
+  background-color: #FF5151; /* Slightly lighter button hover color for contrast */
+  transform: scale(1.05); /* Slight zoom on hover */
+}
+
+/* Button focus effect for accessibility */
+.login-btn:focus, .form-control:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(255, 107, 107, 0.8); /* Red glow effect on focus */
+}
+
+/* Icon styling */
+.icon {
+  margin-right: 8px; /* Spacing between icon and label */
+  color: #FF6B6B; /* Icon color updated to match button */
+  font-size: 1.2rem; /* Icon size */
+}
+
+/* Adjust login card padding and width for mobile responsiveness */
+@media (max-width: 768px) {
+  .login-card {
+    padding: 20px;
+    width: 90%; /* Adjust width for smaller screens */
+  }
+}

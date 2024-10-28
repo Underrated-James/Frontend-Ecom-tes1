@@ -1,0 +1,23 @@
+.register-container {
+    background-color: #f8f9fa;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .register-card {
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .register-title {
+    margin-bottom: 20px;
+    text-align: center;
+  }
+  
+  .icon {
+    margin-right: 5px;
+  }
+  

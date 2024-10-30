@@ -1,37 +1,58 @@
 .product-card {
-    background-color: #007bff;
-    width: 300px; /* Set a fixed width */
-    height: 400px; /* Set a fixed height */
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between; /* Align contents evenly */
-    margin: 0 auto; /* Center the card */
-  }
-  
-  .product-card:hover {
-    transform: scale(1.05); /* Optional: add a hover effect */
-  }
-  
-  .product-card-title {
-    font-size: 1.5rem;
-    margin-bottom: 8px;
-  }
-  
-  .product-card-text {
-    margin: 4px 0;
-  }
-  
-  .edit-btn, .delete-btn {
-    margin-right: 8px;
-    padding: 8px;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff; /* Change color as needed */
-    color: white;
-    cursor: pointer;
-  }
-  
-  .edit-btn:hover, .delete-btn:hover {
-    background-color: #0056b3; /* Darker color on hover */
-  }
-  
+  background-color: #f8f9fa; /* Use a lighter background for contrast */
+  width: 300px; /* Set a fixed width */
+  height: 400px; /* Set a fixed height */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* Align contents evenly */
+  margin: 0 auto; /* Center the card */
+  border: 1px solid #007bff; /* Optional: add a border for distinction */
+  border-radius: 8px; /* Rounded corners */
+  transition: transform 0.2s ease; /* Smooth transition for hover effect */
+}
+
+.product-card:hover {
+  transform: scale(1.05); /* Optional: add a hover effect */
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2); /* Add shadow on hover */
+}
+
+.product-card-title {
+  font-size: 1.5rem;
+  margin-bottom: 8px;
+  color: #343a40; /* Darker text for better readability */
+}
+
+.product-card-text {
+  margin: 4px 0;
+  color: #495057; /* Darker color for text */
+}
+
+.button-group {
+  display: flex;
+  justify-content: space-between; /* Space between buttons */
+}
+
+.edit-btn, .delete-btn {
+  padding: 8px 12px; /* Adjust padding for buttons */
+  border: none;
+  border-radius: 4px;
+  transition: background-color 0.2s ease; /* Smooth transition for button colors */
+}
+
+.edit-btn {
+  background-color: #007bff; /* Primary button color */
+  color: white;
+}
+
+.edit-btn:hover {
+  background-color: #0056b3; /* Darker color on hover */
+}
+
+.delete-btn {
+  background-color: #dc3545; /* Danger button color */
+  color: white;
+}
+
+.delete-btn:hover {
+  background-color: #c82333; /* Darker color on hover */
+}

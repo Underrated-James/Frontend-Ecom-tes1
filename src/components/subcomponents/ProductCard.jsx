@@ -7,15 +7,17 @@ const ProductCard = ({ product, onEdit, onDelete }) => {
   return (
     <Card className="product-card mb-3 shadow-sm">
       <Card.Body>
-        <Card.Title>{product.title}</Card.Title>
-        <Card.Text>
+        <Card.Title className="product-card-title">{product.title}</Card.Title>
+        <Card.Text className="product-card-text">
           Price: ${product.price.toFixed(2)} <br />
           Quantity: {product.quantity} <br />
           Category: {product.category} <br />
           Description: {product.description}
         </Card.Text>
-        <Button variant="primary" onClick={() => onEdit(product.id)}>Edit</Button>
-        <Button variant="danger" onClick={() => onDelete(product.id)} className="ml-2">Delete</Button>
+        <div className="button-group">
+          <Button variant="primary" className="edit-btn" onClick={() => onEdit(product.id)}>Edit</Button>
+          <Button variant="danger" className="delete-btn" onClick={() => onDelete(product.id)}>Delete</Button>
+        </div>
       </Card.Body>
     </Card>
   );
